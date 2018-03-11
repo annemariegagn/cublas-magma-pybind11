@@ -424,6 +424,7 @@ set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS} -O3 --debug --device-debug -gencode arch=
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
+set(CUDA_LIBRARIES cusolver cusparse) 
 
 cuda_add_library(gpu_library SHARED
   src/gpu_library.cpp
